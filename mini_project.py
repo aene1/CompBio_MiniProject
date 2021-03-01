@@ -18,8 +18,9 @@ def download_data(SRR):
 parser = argparse.ArgumentParser(description='Process some SRRs and split paired reads.')
 parser.add_argument('SRR', metavar='N', type=str, nargs='+',
                     help='Compare SRR files')
-parser.add_argument('--download_SRR', dest='accumulate', action='store_const')
+parser.add_argument('--download_SRR')
 
 args = parser.parse_args()
 
-download_data(args)
+for i in args.SRR:
+    download_data(i)
