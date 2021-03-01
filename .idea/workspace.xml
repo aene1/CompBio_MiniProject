@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="added a parser">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614561377661</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added CDS">
+      <created>1614564474233</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614564474233</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,7 +121,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added a parser" />
     <MESSAGE value="fixed args" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed args" />
+    <MESSAGE value="added CDS" />
+    <option name="LAST_COMMIT_MESSAGE" value="added CDS" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1537" height="276" key="GridCell.Tab.0.bottom" timestamp="1614561314090">
@@ -134,10 +141,11 @@
       <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state width="1537" height="276" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1614561314090" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614561425414">
-      <screen x="0" y="23" width="1792" height="1026" />
+    <state x="421" y="271" key="Vcs.Push.Dialog.v2" timestamp="1614564505491">
+      <screen x="0" y="23" width="1792" height="1031" />
     </state>
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614561425414" />
+    <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1031@0.23.1792.1031" timestamp="1614564505491" />
     <state x="486" y="247" width="670" height="676" key="search.everywhere.popup" timestamp="1614559976028">
       <screen x="0" y="23" width="1792" height="1028" />
     </state>

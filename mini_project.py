@@ -10,7 +10,7 @@ log_file = open('miniProject.log','w')
 #download the SRR and fastq them
 def download_data(SRR):
     wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' +  SRR + '/' + SRR + '.1'
-    fastq = 'fastq-dump -I --split-files' +SRR + '.1'
+    fastq = 'fastq-dump -I --split-files ' +SRR + '.1'
     os.system(wget)
     os.system(fastq)
 
