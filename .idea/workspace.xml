@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="&#10;added a space for the command">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/miniProject.log" afterDir="false" />
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="fixed extract_CDS and kallisto">
       <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614565450804</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed extract_CDS and kallisto">
+      <created>1614620217810</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614620217810</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,7 +154,8 @@
     <MESSAGE value="added a renaming line" />
     <MESSAGE value="." />
     <MESSAGE value="&#10;added a space for the command" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;added a space for the command" />
+    <MESSAGE value="fixed extract_CDS and kallisto" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed extract_CDS and kallisto" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1386" height="276" key="GridCell.Tab.0.bottom" timestamp="1614618304845">

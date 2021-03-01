@@ -8,13 +8,13 @@ log_file = open('miniProject.log','w')
 
 
 #download the SRR and fastq them
-# def download_data(SRR):
-#     wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' +  SRR + '/' + SRR + '.1'
-#     fastq = 'fastq-dump -I --split-files ' +SRR + '.1'
-#     rename = 'mv ' + SRR + '.1' +' ' + SRR
-#     os.system(wget)
-#     os.system(rename)
-#     os.system(fastq)
+def download_data(SRR):
+    wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' +  SRR + '/' + SRR + '.1'
+    fastq = 'fastq-dump -I --split-files ' +SRR + '.1'
+    rename = 'mv ' + SRR + '.1' +' ' + SRR
+    os.system(wget)
+    os.system(rename)
+    os.system(fastq)
 
 
 #extract the CDS in order to construct the transcriptome
@@ -45,13 +45,16 @@ def kallisto(SRR):
 
 
 
-# parser = argparse.ArgumentParser(description='Process some SRRs and split paired reads.')
-# parser.add_argument('SRR', metavar='N', type=str, nargs='+',
-#                     help='Compare SRR files')
-# # parser.add_argument('--download_SRR')
-# args = parser.parse_args()
-
-# for i in args.SRR:
-#     download_data(i)
-
+parser = argparse.ArgumentParser(description='Process some SRRs and split paired reads.')
+parser.add_argument('SRR', metavar='N', type=str, nargs='+',
+                    help='Compare SRR files')
+# parser.add_argument('--download_SRR')
+args = parser.parse_args()
 extract_CDS()
+
+
+for i in args.SRR:
+    download_data(i)
+    kallisto(i)
+
+
