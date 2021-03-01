@@ -90,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614560234712</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed args">
+      <created>1614561377661</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614561377661</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,16 +110,34 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added a parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a parser" />
+    <MESSAGE value="fixed args" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed args" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614560752941">
+    <state width="1537" height="276" key="GridCell.Tab.0.bottom" timestamp="1614561314090">
       <screen x="0" y="23" width="1792" height="1026" />
     </state>
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614560752941" />
+    <state width="1537" height="276" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1614561314090" />
+    <state width="1537" height="276" key="GridCell.Tab.0.center" timestamp="1614561314089">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state width="1537" height="276" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1614561314089" />
+    <state width="1537" height="276" key="GridCell.Tab.0.left" timestamp="1614561314089">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state width="1537" height="276" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1614561314089" />
+    <state width="1537" height="276" key="GridCell.Tab.0.right" timestamp="1614561314090">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state width="1537" height="276" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1614561314090" />
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614561425414">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614561425414" />
     <state x="486" y="247" width="670" height="676" key="search.everywhere.popup" timestamp="1614559976028">
       <screen x="0" y="23" width="1792" height="1028" />
     </state>
