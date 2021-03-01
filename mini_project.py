@@ -11,7 +11,9 @@ log_file = open('miniProject.log','w')
 def download_data(SRR):
     wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' +  SRR + '/' + SRR + '.1'
     fastq = 'fastq-dump -I --split-files ' +SRR + '.1'
+    rename = 'mv' + SRR + '.1' +' ' + SRR
     os.system(wget)
+    os.system(rename)
     os.system(fastq)
 
 
@@ -43,3 +45,5 @@ args = parser.parse_args()
 
 for i in args.SRR:
     download_data(i)
+
+extract_CDS()
