@@ -59,7 +59,7 @@ def SleuthInput(SRR):
 def Sleuth():
     Sleuth_command = 'R Sleuth.R'
     os.system(Sleuth_command)
-    sleuth_output = 'R_sleuth_output.txt'
+    sleuth_output = 'R_sleuth.txt'
     read_sleuth = open(sleuth_output).readlines()
     for i in read_sleuth:
         log_file.write(i + 'n')
