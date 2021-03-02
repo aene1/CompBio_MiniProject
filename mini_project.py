@@ -45,7 +45,7 @@ def kallisto(SRR):
 
 def SleuthInput(SRR):
     #output file that goes in R
-    output = open('input_sleut.txt', 'w')
+    output = open('input_sleuth.txt', 'w')
     # initial line in file
     output.write('sample' + '\t' + 'condition' + '\t' + 'path' + '\n')
     # based on SRR number, write condition and path to output file
