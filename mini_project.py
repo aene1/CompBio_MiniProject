@@ -40,13 +40,13 @@ def kallisto(SRR):
 
 
 
-def SleuthInput(SRRs):
+def SleuthInput(SRR):
     #output file that goes in R
     output = open('input_sleut.txt', 'w')
     # initial line in file
     output.write('sample' + '\t' + 'condition' + '\t' + 'path' + '\n')
     # based on SRR number, write condition and path to output file
-    for i in SRRs:
+    for i in SRR:
         if int(i[3:]) % 2 == 0:  #if it is even then it is condition 1 as in 2dpi, if it is not then it is condition 2 as in 6dpi
             output.writeln(str(i) + '\t' + "2dpi" + '\t')
         else:
@@ -81,7 +81,7 @@ if args.download_files != 'N':
 extract_CDS()
 for i in args.SRR:
     kallisto(i)
-    SleuthInput()
+    SleuthInput(i)
     Sleuth()
 
 
