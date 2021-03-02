@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="kallisto" />
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="sleth">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614714355654</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="sleth">
+      <created>1614718600612</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1614718600612</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +247,8 @@
     <MESSAGE value="&#10;." />
     <MESSAGE value="fix files" />
     <MESSAGE value="kallisto" />
-    <option name="LAST_COMMIT_MESSAGE" value="kallisto" />
+    <MESSAGE value="sleth" />
+    <option name="LAST_COMMIT_MESSAGE" value="sleth" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1458" height="157" key="GridCell.Tab.0.bottom" timestamp="1614714211482">
@@ -272,17 +283,18 @@
     <state width="1458" height="157" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1614714211482" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1614617444601" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1614618304844" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614714358921">
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614718603310">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.23.1792.1024@0.23.1792.1024" timestamp="1614642370329" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614561425414" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1614710873237" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1614714358921" />
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1614718603310" />
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1031@0.23.1792.1031" timestamp="1614564685179" />
-    <state x="486" y="247" width="670" height="676" key="search.everywhere.popup" timestamp="1614559976028">
-      <screen x="0" y="23" width="1792" height="1028" />
+    <state x="486" y="247" width="670" height="678" key="search.everywhere.popup" timestamp="1614718506078">
+      <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="486" y="247" width="670" height="676" key="search.everywhere.popup/0.23.1792.1028@0.23.1792.1028" timestamp="1614559976028" />
+    <state x="486" y="247" width="670" height="678" key="search.everywhere.popup/0.23.1792.1030@0.23.1792.1030" timestamp="1614718506078" />
   </component>
 </project>

@@ -7,6 +7,8 @@ import glob
 log_file = open('miniProject.log','w+')
 
 
+#speed up spades run
+
 #download the SRR and fastq them
 def download_data(SRR):
     wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' + SRR + '/' + SRR + '.1'
@@ -47,12 +49,11 @@ def SleuthInput(SRR):
     # initial line in file
     output.write('sample' + '\t' + 'condition' + '\t' + 'path' + '\n')
     # based on SRR number, write condition and path to output file
-    for i in SRR:
-        path = "/" + i
-        if int(i[2:]) % 2 == 0:  #if it is even then it is condition 1 as in 2dpi, if it is not then it is condition 2 as in 6dpi
-            output.writeln(str(i) + '\t' + '2dpi' + path + '\t')
-        else:
-            output.writeln(str(i) + '\t' + '6dpi' + path + '\t')
+    path = "/" + i
+    if int(i[2:]) % 2 == 0:  #if it is even then it is condition 1 as in 2dpi, if it is not then it is condition 2 as in 6dpi
+        output.writeln(str(i) + '\t' + '2dpi' + path + '\t')
+    else:
+        output.writeln(str(i) + '\t' + '6dpi' + path + '\t')
     output.close()
 
 def Sleuth():
@@ -62,8 +63,6 @@ def Sleuth():
     read_sleuth = open(sleuth_output).readlines()
     for i in read_sleuth:
         log_file.write(i + 'n')
-
-
 
 
 
