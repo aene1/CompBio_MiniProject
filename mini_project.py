@@ -3,13 +3,12 @@ import os
 from Bio import SeqIO
 from Bio import Entrez
 
-log_file = open('miniProject.log','w')
-
+log_file = open('miniProject.log','w+')
 
 
 #download the SRR and fastq them
 def download_data(SRR):
-    wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' +  SRR + '/' + SRR + '.1'
+    wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' + SRR + '/' + SRR + '.1'
     fastq = 'fastq-dump -I --split-files ' +SRR + '.1'
     rename = 'mv ' + SRR + '.1' +' ' + SRR
     os.system(wget)
@@ -41,20 +40,50 @@ def kallisto(SRR):
 
 
 
+def SleuthInput(SRRs):
+    #output file that goes in R
+    output = open('input_sleut.txt', 'w')
+    # initial line in file
+    output.write('sample' + '\t' + 'condition' + '\t' + 'path' + '\n')
+    # based on SRR number, write condition and path to output file
+    for i in SRRs:
+        if int(i[3:]) % 2 == 0:  #if it is even then it is condition 1 as in 2dpi, if it is not then it is condition 2 as in 6dpi
+            output.writeln(str(i) + '\t' + "2dpi" + '\t')
+        else:
+            output.writeln(str(i) + '\t' + "6dpi" + '\t')
+    output.close()
+
+def Sleuth():
+    Sleuth_command = 'R Sleuth.R'
+    os.system(Sleuth_command)
+    sleuth_output = 'R_sleuth_output.txt'
+    read_sleuth = open(sleuth_output).readlines()
+    for i in read_sleuth:
+        log_file.write(i + 'n')
+
 
 
 
 
 parser = argparse.ArgumentParser(description='Process some SRRs and split paired reads.')
 parser.add_argument('SRR', metavar='N', type=str, nargs='+',
-                    help='Compare SRR files')
-# parser.add_argument('--download_SRR')
+                    help='SRR files we want for the comparasion')
+parser.add_argument('--download_files', metavar='N', type=str, nargs='+',
+                    help='Download the SRR, instead of using the server ones')
 args = parser.parse_args()
 extract_CDS()
 
 
+if args.download_files != 'N':
+    for i in args.SRR:
+        download_data(i)
+
+extract_CDS()
 for i in args.SRR:
-    download_data(i)
     kallisto(i)
+    SleuthInput()
+    Sleuth()
+
+
 
 
