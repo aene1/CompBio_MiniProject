@@ -79,10 +79,8 @@ files = glob.glob(("**/*"), recursive=True)
 files = [f for f in files if os.path.isfile(f)]
 
 for i in files:
-        for j in args.SRR:
-            if j != i:
-                print(j)
-                download_data(j)
+    if i not in args.SRR:
+        download_data(i)
 
 extract_CDS()
 for i in args.SRR:

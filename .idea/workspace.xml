@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="&#10;.">
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="fix files">
       <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +181,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614713614144</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix files">
+      <created>1614713781999</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614713781999</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix files">
+      <created>1614713822356</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614713822356</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,7 +223,8 @@
     <MESSAGE value="added SleuthInput" />
     <MESSAGE value="add the SRR_test_files path" />
     <MESSAGE value="&#10;." />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;." />
+    <MESSAGE value="fix files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix files" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1458" height="157" key="GridCell.Tab.0.bottom" timestamp="1614713735600">
@@ -244,13 +259,13 @@
     <state width="1458" height="157" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1614713735599" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1614617444601" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1614618304844" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614713622095">
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614713824992">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.23.1792.1024@0.23.1792.1024" timestamp="1614642370329" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614561425414" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1614710873237" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1614713622095" />
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1614713824992" />
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1031@0.23.1792.1031" timestamp="1614564685179" />
     <state x="486" y="247" width="670" height="676" key="search.everywhere.popup" timestamp="1614559976028">
       <screen x="0" y="23" width="1792" height="1028" />
