@@ -36,9 +36,9 @@ def extract_CDS():
 
 #runn kallisto based on SRR numbers and the SRR files dowloaded before
 def kallisto(SRR):
-    kallisto_index = 'time kallisto index -i HCMVindex.idx CDS_EF999921.fa'
+    kallisto_index = 'time kallisto index -i index/index.idx CDS_EF999921.fa'
     os.system(kallisto_index)
-    run_kallisto = 'time kallisto quant -i HCMVindex.idx -o ./' + SRR +' -b 30 -t 4 '+ SRR + '_1.fastq '+ SRR+ '_2.fastq'
+    run_kallisto = 'time kallisto quant -i index/index.idx -o ./' + SRR +' -b 30 -t 4 '+ SRR + '_1.fastq '+ SRR+ '_2.fastq'
     os.system(run_kallisto)
 
 
