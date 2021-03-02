@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="fixed sleuth">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sleuth.R" beforeDir="false" afterPath="$PROJECT_DIR$/Sleuth.R" afterDir="false" />
-    </list>
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="fix R" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -245,7 +242,35 @@
       <option name="project" value="LOCAL" />
       <updated>1614728302879</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="fix R">
+      <created>1614728590124</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1614728590124</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix R">
+      <created>1614728667223</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1614728667223</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fix R">
+      <created>1614728798248</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1614728798248</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix R">
+      <created>1614728848870</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1614728848870</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,7 +302,8 @@
     <MESSAGE value="kallisto" />
     <MESSAGE value="sleth" />
     <MESSAGE value="fixed sleuth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed sleuth" />
+    <MESSAGE value="fix R" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix R" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1458" height="157" key="GridCell.Tab.0.bottom" timestamp="1614714211482">
@@ -312,8 +338,8 @@
     <state width="1458" height="157" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1614714211482" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1614617444601" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1614618304844" />
-    <state x="421" y="271" key="Vcs.Push.Dialog.v2" timestamp="1614728306403">
-      <screen x="0" y="23" width="1792" height="1034" />
+    <state x="421" y="271" key="Vcs.Push.Dialog.v2" timestamp="1614728851548">
+      <screen x="0" y="23" width="1792" height="1037" />
     </state>
     <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.23.1792.1024@0.23.1792.1024" timestamp="1614642370329" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614561425414" />
@@ -321,6 +347,8 @@
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1614718603310" />
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1031@0.23.1792.1031" timestamp="1614564685179" />
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1034@0.23.1792.1034" timestamp="1614728306403" />
+    <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1036@0.23.1792.1036" timestamp="1614728593379" />
+    <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1037@0.23.1792.1037" timestamp="1614728851548" />
     <state x="486" y="247" width="670" height="678" key="search.everywhere.popup" timestamp="1614718506078">
       <screen x="0" y="23" width="1792" height="1030" />
     </state>
