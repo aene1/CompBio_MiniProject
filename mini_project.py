@@ -75,12 +75,13 @@ args = parser.parse_args()
 
 
 in_path = os.getcwd()
-files = glob.glob(( "**/*"), recursive=True)
+files = glob.glob(("**/*"), recursive=True)
 files = [f for f in files if os.path.isfile(f)]
 
 for i in files:
-    if args.SRR != i:
         for j in args.SRR:
+            if j != i:
+                print(j)
             download_data(j)
 
 extract_CDS()
