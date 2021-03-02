@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="added SleuthInput">
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="&#10;.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CDS_EF999921.fa" beforeDir="false" afterPath="$PROJECT_DIR$/CDS_EF999921.fa" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +161,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614710868349</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add the SRR_test_files path">
+      <created>1614712294857</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1614712294857</updated>
+    </task>
+    <task id="LOCAL-00014" summary="&#10;.">
+      <created>1614712427979</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614712427979</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,7 +201,9 @@
     <MESSAGE value="fixed extract_CDS and kallisto" />
     <MESSAGE value="add Sleuth" />
     <MESSAGE value="added SleuthInput" />
-    <option name="LAST_COMMIT_MESSAGE" value="added SleuthInput" />
+    <MESSAGE value="add the SRR_test_files path" />
+    <MESSAGE value="&#10;." />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;." />
   </component>
   <component name="WindowStateProjectService">
     <state width="1458" height="157" key="GridCell.Tab.0.bottom" timestamp="1614712168996">
@@ -223,13 +238,13 @@
     <state width="1458" height="157" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1614712168995" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1614617444601" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1614618304844" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614710873237">
-      <screen x="0" y="23" width="1792" height="1028" />
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614712437904">
+      <screen x="0" y="23" width="1792" height="1030" />
     </state>
     <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.23.1792.1024@0.23.1792.1024" timestamp="1614642370329" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614561425414" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1614710873237" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1614620201222" />
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1614712437904" />
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1031@0.23.1792.1031" timestamp="1614564685179" />
     <state x="486" y="247" width="670" height="676" key="search.everywhere.popup" timestamp="1614559976028">
       <screen x="0" y="23" width="1792" height="1028" />

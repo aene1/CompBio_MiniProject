@@ -72,12 +72,13 @@ parser.add_argument('SRR', metavar='N', type=str, nargs='+',
 parser.add_argument('--download_files', metavar='N', type=str, nargs='+',
                     help='Download the SRR, instead of using the server ones')
 args = parser.parse_args()
-extract_CDS()
 
-cwd = os.getcwd()
-SRR_test_files = glob.glob(cwd + '/*')
 
-for i in SRR_test_files:
+in_path = os.getcwd()
+files = glob.glob(( "**/*"), recursive=True)
+files = [f for f in files if os.path.isfile(f)]
+
+for i in files:
     if args.SRR != i:
         for j in args.SRR:
             download_data(j)
