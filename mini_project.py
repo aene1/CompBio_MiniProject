@@ -82,7 +82,7 @@ for i in files:
         for j in args.SRR:
             if j != i:
                 print(j)
-            download_data(j)
+                download_data(j)
 
 extract_CDS()
 for i in args.SRR:
