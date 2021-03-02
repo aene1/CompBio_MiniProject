@@ -2,6 +2,7 @@ import argparse
 import os
 from Bio import SeqIO
 from Bio import Entrez
+import glob
 
 log_file = open('miniProject.log','w+')
 
@@ -73,10 +74,13 @@ parser.add_argument('--download_files', metavar='N', type=str, nargs='+',
 args = parser.parse_args()
 extract_CDS()
 
+cwd = os.getcwd()
+SRR_test_files = glob.glob(cwd + '/*')
 
-if args.download_files != 'N':
-    for i in args.SRR:
-        download_data(i)
+for i in SRR_test_files:
+    if args.download_files != i:
+        for j in args.SRR:
+            download_data(j)
 
 extract_CDS()
 for i in args.SRR:
