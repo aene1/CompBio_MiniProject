@@ -78,7 +78,7 @@ cwd = os.getcwd()
 SRR_test_files = glob.glob(cwd + '/*')
 
 for i in SRR_test_files:
-    if args.download_files != i:
+    if args.SRR != i:
         for j in args.SRR:
             download_data(j)
 
