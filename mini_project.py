@@ -57,7 +57,7 @@ def SleuthInput(SRR):
     output.write('sample' + '\t' + 'condition' + '\t' + 'path' + '\n')
     # based on SRR number, write condition and path to output file
     for i in SRR:
-        path = i
+        path = path + '/' + i
         if int(i[3:]) % 2 == 0:  #if it is even then it is condition 1 as in 2dpi, if it is not then it is condition 2 as in 6dpi
             output.write('results_' + str(i) + '\t' + '2dpi' + '\t' +  path + '\n')
         else:
