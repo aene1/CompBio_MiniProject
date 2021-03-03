@@ -76,8 +76,8 @@ def Sleuth():
 
 def index_bowtie():
     handle = Entrez.efetch(db='nucleotide', id='EF999921', rettype='gb', retmode='text')
-    records = list(SeqIO.parse(handle, 'fasta'))
-    SeqIO.write(records[0], 'EF999921.fa', "fasta")
+    records = SeqIO.parse(handle, 'fasta')
+    SeqIO.write(records, 'EF999921.fa', "fasta")
 
 
 def bowtie2(SRR):
