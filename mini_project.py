@@ -93,8 +93,6 @@ def bowtie2(SRR):
 
 
 def Count_bowtie(SRR):
-    bowtie_SRR1 = open('bowtie2_' + SRR + '.1.fastq').readlines()
-    bowtie_SRR2 = open('bowtie2_' + SRR + '.2.fastq').readlines()
     donor = ''
     if SRR == "SRR5660030":
         donor += 'Donor 1 (2dpi)'
@@ -104,9 +102,11 @@ def Count_bowtie(SRR):
         donor += 'Donor 3 (2dpi)'
     elif SRR == 'SRR5660045	':
         donor += 'Donor 3 (6dpi)'
-    len_bowtie = ((len(bowtie_SRR1) + len(bowtie_SRR2)) / 8)
+    bowtie_SRR1 = open('bowtie2_' + SRR + '.1.fastq').readlines()
+    bowtie_SRR2 = open('bowtie2_' + SRR + '.2.fastq').readlines()
     original1 = open(SRR + '.1_1.fastq').readlines()
     original2 = open(SRR + '.1_2.fastq').readlines()
+    len_bowtie = ((len(bowtie_SRR1) + len(bowtie_SRR2)) / 8)
     original = (len(original1) + len(original2)) / 8
     # write out to the log file
     log_file.write(donor + " had " + str(original) + ' read pairs before Bowtie2 filtering and ' + str(len_bowtie) + ' read pairs after \n')
@@ -153,25 +153,25 @@ for i in args.SRR:
         download_data(i)
 
 
-extract_CDS()
-index_bowtie()
-print("INDEX BOWTIE BUILT")
-
+# extract_CDS()
+# index_bowtie()
+# print("INDEX BOWTIE BUILT")
+#
+# # for i in args.SRR:
+# #     fastq(i)
+#
 # for i in args.SRR:
-#     fastq(i)
-
+#     kallisto(i)
+#     print("BUILD INDEX")
+#     bowtie2(i)
+#     print("RAN BOWTIE")
+# #
+# SleuthInput(args.SRR)
+# print('SLEUTHinput WORKED')
+# Sleuth()
+#
+#
 for i in args.SRR:
-    kallisto(i)
-    print("BUILD INDEX")
-    bowtie2(i)
-    print("RAN BOWTIE")
-#
-SleuthInput(args.SRR)
-print('SLEUTHinput WORKED')
-Sleuth()
-#
-#
-# for i in args.SRR:
-#     Count_bowtie(i)
-#
-# run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
+    Count_bowtie(i)
+
+run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
