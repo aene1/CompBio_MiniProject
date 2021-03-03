@@ -20,7 +20,9 @@ def download_data(SRR):
 
 def fastq(SRR):
     fastq = 'fastq-dump -I --split-files ' +SRR + '.1'
+    rename = 'mv ' + SRR + '.1' + SRR
     os.system(fastq)
+    os.system(rename)
     print(fastq)
 
 
