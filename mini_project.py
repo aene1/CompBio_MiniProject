@@ -78,6 +78,7 @@ def index_bowtie():
     handle = Entrez.efetch(db='nucleotide', id='EF999921', rettype='gb', retmode='text')
     records = list(SeqIO.parse(handle, 'fasta'))
     for i in records:
+        print(i)
         SeqIO.write(i, 'EF999921.fa', "fasta")
 
 
