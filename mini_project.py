@@ -75,7 +75,7 @@ def Sleuth():
 #build bowtie2 and run it to get SAM files
 
 def index_bowtie():
-    handle = Entrez.efetch(db='nucleotide', id='EF999921', rettype='gb', retmode='text')
+    handle = Entrez.efetch(db='nucleotide', id='EF999921', rettype='fasta', retmode='text')
     records = list(SeqIO.parse(handle, 'fasta'))
     for i in records:
         print(i)
@@ -108,6 +108,7 @@ for i in args.SRR:
 
 extract_CDS()
 index_bowtie()
+
 for i in args.SRR:
     fastq(i)
     kallisto(i)
