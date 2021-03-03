@@ -157,17 +157,17 @@ extract_CDS()
 index_bowtie()
 print("INDEX BOWTIE BUILT")
 
-for i in args.SRR:
-    fastq(i)
-
 # for i in args.SRR:
-#     kallisto(i)
-#     print("BUILD INDEX")
-#     bowtie2(i)
-#     print("RAN BOWTIE")
-# #
-# SleuthInput(args.SRR)
-# print('SLEUTHinput WORKED')
+#     fastq(i)
+
+for i in args.SRR:
+    kallisto(i)
+    print("BUILD INDEX")
+    bowtie2(i)
+    print("RAN BOWTIE")
+#
+SleuthInput(args.SRR)
+print('SLEUTHinput WORKED')
 Sleuth()
 #
 #
