@@ -52,17 +52,17 @@ def kallisto(SRR):
 
 def SleuthInput(SRR):
     #output file that goes in R
-    output = open('input_sleuth.txt', 'w+')
+    output = open('input_sleuth.txt', 'w')
     # initial line in file
     output.write('sample' + '\t' + 'condition' + '\t' + 'path' + '\n')
     # based on SRR number, write condition and path to output file
     for i in SRR:
-        path = path + '/' + 'results_' + i
-        print(path)
+        path1 = path + '/' + 'results_' + i
+        print(path1)
         if int(i[3:]) % 2 == 0:  #if it is even then it is condition 1 as in 2dpi, if it is not then it is condition 2 as in 6dpi
-            output.write(str(i) + '\t' + '2dpi' + '\t' +  path + '\n')
+            output.write(str(i) + '\t' + '2dpi' + '\t' +  path1 + '\n')
         else:
-            output.write(str(i) + '\t' + '6dpi' + '\t' + path + '\n')
+            output.write(str(i) + '\t' + '6dpi' + '\t' + path1 + '\n')
     output.close()
 
 def Sleuth():
