@@ -129,11 +129,13 @@ for i in args.SRR:
 
 extract_CDS()
 index_bowtie()
+print("INDEX BOWTIE BUILT")
 
 for i in args.SRR:
     fastq(i)
     kallisto(i)
     bowtie2(i)
+    print("RAN BOWTIE")
 
 SleuthInput(args.SRR)
 Sleuth()
