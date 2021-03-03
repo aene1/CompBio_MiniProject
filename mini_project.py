@@ -56,6 +56,7 @@ def SleuthInput(SRR):
     # initial line in file
     output.write('sample' + '\t' + 'condition' + '\t' + 'path' + '\n')
     # based on SRR number, write condition and path to output file
+    path = os.getcwd()
     for i in SRR:
         path1 = path + '/' + 'results_' + i
         print(path1)
