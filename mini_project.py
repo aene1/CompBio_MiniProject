@@ -59,9 +59,9 @@ def SleuthInput(SRR):
     for i in SRR:
         path = i
         if int(i[3:]) % 2 == 0:  #if it is even then it is condition 1 as in 2dpi, if it is not then it is condition 2 as in 6dpi
-            output.write(str(i) + '\t' + '2dpi' + '\t' +  path + '\n')
+            output.write('results_' + str(i) + '\t' + '2dpi' + '\t' +  path + '\n')
         else:
-            output.write(str(i) + '\t' + '6dpi' + '\t' + path + '\n')
+            output.write('results_' + str(i) + '\t' + '6dpi' + '\t' + path + '\n')
     output.close()
 
 def Sleuth():
