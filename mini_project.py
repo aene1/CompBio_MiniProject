@@ -45,7 +45,7 @@ def extract_CDS():
 def kallisto(SRR):
     kallisto_index = 'time kallisto index -i HCMV_index.idx CDS_EF999921.fa'
     os.system(kallisto_index)
-    run_kallisto = 'time kallisto quant -i HCMV_index.idx -o' + path + '/' + SRR +' -b 30 -t 4 '+ SRR + '.1_1.fastq '+ SRR+ '.1_2.fastq'
+    run_kallisto = 'time kallisto quant -i HCMV_index.idx -o' + path + '/results_' + SRR +' -b 30 -t 4 '+ SRR + '.1_1.fastq '+ SRR+ '.1_2.fastq'
     os.system(run_kallisto)
 
 
@@ -73,6 +73,12 @@ def Sleuth():
         log_file.write(i + 'n')
 
 
+
+# def bowtie2(SRR):
+#     build = 'bowtie2-build ./EF999921.fasta EF99992_1'
+#     os.system(build)
+#     bowtie = 'bowtie2 --quiet --no-unal --al-conc BOW_'+SRR+'.fastq -x EF99992_1 -1 '+SRR+ '_1.fastq -2'+SRR+'_2.fastq -S '+SRR+ '.sam'
+#     os.system(bowtie)
 
 
 
