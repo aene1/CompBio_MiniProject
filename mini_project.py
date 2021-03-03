@@ -107,8 +107,8 @@ def Count_bowtie(SRR):
     original = (len(original1) + len(original2))/8
     #write out to the log file
     with open('MiniProject.log', 'a') as output:
-        output.write(donor + " had " + str(original) + ' read pairs before Bowtie2 filtering and ' + str(len_bowtie) + ' read pairs after \n')
-        output.close()
+        log_file.write(donor + " had " + str(original) + ' read pairs before Bowtie2 filtering and ' + str(len_bowtie) + ' read pairs after \n')
+        log_file.close()
 
 
 parser = argparse.ArgumentParser(description='Process some SRRs and split paired reads.')

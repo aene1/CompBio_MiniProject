@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="fixed bowtie">
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="count_bowtie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
     </list>
@@ -76,13 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614558781301</updated>
-    </task>
-    <task id="LOCAL-00014" summary="&#10;.">
-      <created>1614712427979</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1614712427979</updated>
     </task>
     <task id="LOCAL-00015" summary="&#10;.">
       <created>1614713614144</created>
@@ -420,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614763361521</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="count_bowtie">
+      <created>1614763967378</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1614763967378</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,7 +457,8 @@
     <MESSAGE value="rename fixed for fastq function" />
     <MESSAGE value="fix kallisto" />
     <MESSAGE value="fixed bowtie" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bowtie" />
+    <MESSAGE value="count_bowtie" />
+    <option name="LAST_COMMIT_MESSAGE" value="count_bowtie" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1750" height="324" key="GridCell.Tab.0.bottom" timestamp="1614762633465">
@@ -496,10 +497,10 @@
     <state width="1458" height="157" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1614714211482" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1614617444601" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1614618304844" />
-    <state x="421" y="269" key="Vcs.Push.Dialog.v2" timestamp="1614763389750">
+    <state x="421" y="269" key="Vcs.Push.Dialog.v2" timestamp="1614763973976">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1614763389750" />
+    <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1614763973976" />
     <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.23.1792.1024@0.23.1792.1024" timestamp="1614736389493" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614734795895" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1614732646531" />
