@@ -45,7 +45,7 @@ def extract_CDS():
 def kallisto(SRR):
     kallisto_index = 'time kallisto index -i HCMV_index.idx CDS_EF999921.fa'
     os.system(kallisto_index)
-    run_kallisto = 'time kallisto quant -i HCMV_index.idx -o homes/aene/results/' + SRR +' -b 30 -t 4 '+ SRR + '.1_1.fastq '+ SRR+ '.1_2.fastq'
+    run_kallisto = 'time kallisto quant -i HCMV_index.idx -o homes/aene/CompBio_MiniProject/results/' + SRR +' -b 30 -t 4 '+ SRR + '.1_1.fastq '+ SRR+ '.1_2.fastq'
     os.system(run_kallisto)
 
 
