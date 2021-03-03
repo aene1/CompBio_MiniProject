@@ -88,13 +88,13 @@ def index_bowtie():
 def bowtie2(SRR):
     build_bowtie2 = 'bowtie2-build EF999921.fa EF999921_1'
     os.system(build_bowtie2)
-    bowtie2 = 'bowtie2 --quiet --no-unal --al-conc EF999921_' + SRR + '.fastq -x EF999921_1 -1 ' + SRR + '.1_1.fastq -2 ' + SRR + '.1_2.fastq -S EF999921_'
+    bowtie2 = 'bowtie2 --quiet --no-unal --al-conc bowtie2_' + SRR + '.fastq -x EF999921_1 -1 ' + SRR + '.1_1.fastq -2 ' + SRR + '.1_2.fastq -S EF999921_'
     os.system(bowtie2)
 
 
 def Count_bowtie(SRR):
-    bowtie_SRR1 = open('EF999921_' + SRR + '.1.fastq').readlines()
-    bowtie_SRR2 = open('EF999921_' + SRR + '.2.fastq').readlines()
+    bowtie_SRR1 = open('bowtie2_' + SRR + '.1.fastq').readlines()
+    bowtie_SRR2 = open('bowtie2_' + SRR + '.2.fastq').readlines()
     donor = ''
     if SRR == "SRR5660030":
         donor += 'Donor 1 (2dpi)'
@@ -109,13 +109,16 @@ def Count_bowtie(SRR):
     original2 = open(SRR + '.1_2.fastq').readlines()
     original = (len(original1) + len(original2)) / 8
     # write out to the log file
-    log_file.write(donor + " had " + str(original) + ' read pairs before Bowtie2 filtering and ' + str(
-        len_bowtie) + ' read pairs after \n')
+    log_file.write(donor + " had " + str(original) + ' read pairs before Bowtie2 filtering and ' + str(len_bowtie) + ' read pairs after \n')
 
 
 def run_spades(SRR1, SRR2, SRR3, SRR4):  # use only assembler to make Spades a lot shorter
     path = os.getcwd()
-    spades_command = 'spades -k 55,77,99,127 --only-assembler -t 2 --pe1-1 ' + path + "/" + 'EF999921' + SRR1 + '.1.fastq --pe1-2 ' + path + "/" + 'EF999921_' + SRR1 + '.2.fastq --pe2-1 ' + path + "/" + 'EF999921_' + SRR2 + '.1.fastq --pe2-2  ' + path + "/" + 'EF999921_' + SRR2 + '.2.fastq --pe3-1 ' + path + "/" + 'EF999921_' + SRR3 + '.1.fastq --pe3-2 ' + path + "/" + 'EF999921_' + SRR3 + '.2.fastq --pe4-1 ' + path + "/" + 'EF999921_' + SRR4 + '.1.fastq --pe4-2 ' + path + "/" + 'EF999921_' + SRR4 + '.2.fastq -o '+ path + '/Spades/'
+    SRR1 = path + "/" + 'bowtie2_' + SRR1
+    SRR2 = path + "/" + 'bowtie2_' + SRR2
+    SRR3 = path + "/" + 'bowtie2_' + SRR3
+    SRR4 = path + "/" + 'bowtie2_' + SRR4
+    spades_command = 'spades -k 55,77,99,127 --only-assembler -t 2 --pe1-1 ' + SRR1 + '.1.fastq --pe1-2 ' + SRR1 + '.2.fastq --pe2-1 '+ SRR2 + '.1.fastq --pe2-2  ' + SRR2 + '.2.fastq --pe3-1 '+ SRR3 + '.1.fastq --pe3-2 '+ SRR3 + '.2.fastq --pe4-1 ' + SRR4 + '.1.fastq --pe4-2 ' + SRR4 + '.2.fastq -o '+ path + '/Spades/'
     # run SPades and print command to log file
     print(spades_command)
     log_file.write(spades_command + '\n')
