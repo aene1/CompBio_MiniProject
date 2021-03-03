@@ -68,8 +68,7 @@ def SleuthInput(SRR):
 def Sleuth():
     Sleuth_command = 'Rscript Sleuth.R'
     os.system(Sleuth_command)
-    sleuth_output = 'R_sleuth.txt'
-    read_sleuth = open(sleuth_output).readlines()
+    read_sleuth = open('R_sleuth_output.txt','r').readlines()
     for i in read_sleuth:
         log_file.write(i + 'n')
 
@@ -103,7 +102,7 @@ extract_CDS()
 for i in args.SRR:
     fastq(i)
     kallisto(i)
-    # bowtie2(i)
+    bowtie2(i)
 
 SleuthInput(args.SRR)
 Sleuth()
