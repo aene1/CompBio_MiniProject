@@ -33,7 +33,6 @@ def extract_CDS():
     records = SeqIO.parse(handle,'genbank')
     count = 0
     outfile = open('CDS_EF999921.fa','w') #the outfile where the CDS records will  be written out to
-    SeqIO.write(records, 'EF999921.fa', 'genbank')
     for i in records:
         for j in i.features:
             if j.type == 'CDS':
@@ -74,8 +73,15 @@ def Sleuth():
 
 
 #build bowtie2 and run it to get SAM files
+
+def index_bowtie():
+    handle = Entrez.efetch(db='nucleotide', id='EF999921', rettype='gb', retmode='text')
+    records = SeqIO.parse(handle, 'fasta')
+    SeqIO.write(records[0], 'EF999921.fa', "fasta")
+
+
 def bowtie2(SRR):
-    build_bowtie2 = 'bowtie2-build ./EF999921.fa EF99992_1'
+    build_bowtie2 = 'bowtie2-build /EF999921.fa EF99992_1'
     os.system(build_bowtie2)
     bowtie2 = 'bowtie2 --quiet --no-unal --al-conc EF999921_' + SRR + '.fastq -x EF999921_1 -1 '+ SRR+ '.1_1.fastq -2 ' + SRR+ '.1_2.fastq -S EF999921_' + SRR+ '.sam'
     os.system(bowtie2)
@@ -99,6 +105,7 @@ for i in args.SRR:
         download_data(i)
 
 extract_CDS()
+index_bowtie()
 for i in args.SRR:
     fastq(i)
     kallisto(i)
