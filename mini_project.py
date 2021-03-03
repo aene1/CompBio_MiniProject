@@ -33,7 +33,7 @@ def extract_CDS():
     records = SeqIO.parse(handle,'genbank')
     count = 0
     outfile = open('CDS_EF999921.fa','w') #the outfile where the CDS records will  be written out to
-    SeqIO.write(records[0], 'EF999921.fa', 'fasta')
+    SeqIO.write(records, 'EF999921.fa', 'fasta')
     for i in records:
         for j in i.features:
             if j.type == 'CDS':
