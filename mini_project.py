@@ -148,19 +148,25 @@ files = [f for f in files if os.path.isfile(f)]
 for i in args.SRR:
     if i not in files:
         download_data(i)
-        fastq(i)
+
 
 extract_CDS()
 index_bowtie()
 print("INDEX BOWTIE BUILT")
-#
+
+for i in args.SRR:
+    fastq(i)
+
 # for i in args.SRR:
 #     kallisto(i)
+#     print("BUILD INDEX")
 #     bowtie2(i)
 #     print("RAN BOWTIE")
-#
+# #
 # SleuthInput(args.SRR)
-# Sleuth()
+# print('SLEUTHinput WORKED')
+Sleuth()
+#
 #
 # for i in args.SRR:
 #     Count_bowtie(i)
