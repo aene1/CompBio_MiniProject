@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="added print staments">
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="get os.getcwd() added to the path">
       <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,34 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614558781301</updated>
-    </task>
-    <task id="LOCAL-00020" summary="sleth">
-      <created>1614718600612</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1614718600612</updated>
-    </task>
-    <task id="LOCAL-00021" summary="sleth">
-      <created>1614725804893</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1614725804893</updated>
-    </task>
-    <task id="LOCAL-00022" summary="fixed sleuth">
-      <created>1614725920345</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1614725920345</updated>
-    </task>
-    <task id="LOCAL-00023" summary="fixed sleuth">
-      <created>1614728041524</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1614728041524</updated>
     </task>
     <task id="LOCAL-00024" summary="fixed sleuth">
       <created>1614728302879</created>
@@ -419,7 +391,35 @@
       <option name="project" value="LOCAL" />
       <updated>1614778810325</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="added print staments">
+      <created>1614779044866</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1614779044866</updated>
+    </task>
+    <task id="LOCAL-00070" summary="added print staments">
+      <created>1614779104630</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1614779104630</updated>
+    </task>
+    <task id="LOCAL-00071" summary="added print staments">
+      <created>1614779189860</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1614779189860</updated>
+    </task>
+    <task id="LOCAL-00072" summary="get os.getcwd() added to the path">
+      <created>1614779232589</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1614779232589</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,7 +458,8 @@
     <MESSAGE value="fixed bowtie" />
     <MESSAGE value="count_bowtie" />
     <MESSAGE value="added print staments" />
-    <option name="LAST_COMMIT_MESSAGE" value="added print staments" />
+    <MESSAGE value="get os.getcwd() added to the path" />
+    <option name="LAST_COMMIT_MESSAGE" value="get os.getcwd() added to the path" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1750" height="324" key="GridCell.Tab.0.bottom" timestamp="1614762633465">
@@ -497,10 +498,10 @@
     <state width="1458" height="157" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1614714211482" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1614617444601" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1614618304844" />
-    <state x="421" y="269" key="Vcs.Push.Dialog.v2" timestamp="1614778829900">
+    <state x="421" y="269" key="Vcs.Push.Dialog.v2" timestamp="1614779253171">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1614778829900" />
+    <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1614779253171" />
     <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.23.1792.1024@0.23.1792.1024" timestamp="1614736389493" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614734795895" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1614732646531" />
@@ -509,6 +510,10 @@
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1034@0.23.1792.1034" timestamp="1614729460655" />
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1036@0.23.1792.1036" timestamp="1614729551332" />
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1037@0.23.1792.1037" timestamp="1614729055828" />
+    <state x="694" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614779346478">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="694" y="481" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1614779346478" />
     <state x="486" y="244" width="670" height="738" key="search.everywhere.popup" timestamp="1614774802153">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

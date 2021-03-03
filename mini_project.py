@@ -139,8 +139,11 @@ for i in args.SRR:
 #     bowtie2(i)
 #     print("RAN BOWTIE")
 
-SleuthInput(args.SRR)
-Sleuth()
+# SleuthInput(args.SRR)
+# Sleuth()
+
+for i in args.SRR:
+    Count_bowtie(i)
 
 
 
