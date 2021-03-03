@@ -128,14 +128,11 @@ def run_spades(SRR1, SRR2, SRR3, SRR4):  # use only assembler to make Spades a l
 #     record = SeqIO.parse('contigs.fasta', 'fasta')
 #     count = 0
 #     seq_len = 0
+#     longest
 #     for i in record:
 #         if len(i.seq) > 1000:
 #             count += 1
-#             seq_len += len(i.seq)
-#             longest_contig[len(i.seq)] = (i.description, i.seq)
 #     log_file.write('There are ' + str(count) + ' contigs > 1000 bp in the assembly.')
-#     log_file.write('\n')
-#     log_file.write('There are ' + str(seq_len) + ' bp in the assembly.')
 #     log_file.write('\n')
 
 
@@ -153,19 +150,19 @@ files = [f for f in files if os.path.isfile(f)]
 for i in args.SRR:
     if i not in files:
         download_data(i)
+        fastq(i)
 
-# extract_CDS()
-# index_bowtie()
-# print("INDEX BOWTIE BUILT")
-#
-# for i in args.SRR:
-#     fastq(i)
-#     kallisto(i)
-#     bowtie2(i)
-#     print("RAN BOWTIE")
+extract_CDS()
+index_bowtie()
+print("INDEX BOWTIE BUILT")
 
-# SleuthInput(args.SRR)
-# Sleuth()
+for i in args.SRR:
+    kallisto(i)
+    bowtie2(i)
+    print("RAN BOWTIE")
+
+SleuthInput(args.SRR)
+Sleuth()
 
 for i in args.SRR:
     Count_bowtie(i)
