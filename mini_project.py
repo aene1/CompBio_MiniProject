@@ -127,15 +127,15 @@ for i in args.SRR:
     if i not in files:
         download_data(i)
 
-extract_CDS()
-index_bowtie()
-print("INDEX BOWTIE BUILT")
-
-for i in args.SRR:
-    fastq(i)
-    kallisto(i)
-    bowtie2(i)
-    print("RAN BOWTIE")
+# extract_CDS()
+# index_bowtie()
+# print("INDEX BOWTIE BUILT")
+#
+# for i in args.SRR:
+#     fastq(i)
+#     kallisto(i)
+#     bowtie2(i)
+#     print("RAN BOWTIE")
 
 SleuthInput(args.SRR)
 Sleuth()
