@@ -13,7 +13,7 @@ path = os.getcwd()
 # download the SRR and fastq them
 def download_data(SRR):
     wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' + SRR + '/' + SRR + '.1'
-    rename = 'mv ' + SRR + '.1' + SRR
+    rename = 'mv ' + SRR + '.1 ' + SRR
     os.system(wget)
     os.system(rename)
 
@@ -150,21 +150,21 @@ files = [f for f in files if os.path.isfile(f)]
 for i in args.SRR:
     if i not in files:
         download_data(i)
-        fastq(i)
+        # fastq(i)
 
-extract_CDS()
-index_bowtie()
-print("INDEX BOWTIE BUILT")
-
-for i in args.SRR:
-    kallisto(i)
-    bowtie2(i)
-    print("RAN BOWTIE")
-
-SleuthInput(args.SRR)
-Sleuth()
-
-for i in args.SRR:
-    Count_bowtie(i)
-
-run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
+# extract_CDS()
+# index_bowtie()
+# print("INDEX BOWTIE BUILT")
+#
+# for i in args.SRR:
+#     kallisto(i)
+#     bowtie2(i)
+#     print("RAN BOWTIE")
+#
+# SleuthInput(args.SRR)
+# Sleuth()
+#
+# for i in args.SRR:
+#     Count_bowtie(i)
+#
+# run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])

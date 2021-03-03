@@ -27,5 +27,4 @@ sleuth_significant <- dplyr::filter(sleuth_table, qval <= 0.05) %>% dplyr::arran
 sig_sleuth <- sleuth_significant %>% select(target_id, test_stat, pval, qval)
 #write target id, test stat, pval and qval for significant transcript
 #include header, tab-delimit
-head(dplyr::select(sleuth_significant, target_id, pval, qval), n=10)
 write.table(sig_sleuth, file="R_sleuth_output.txt",quote= FALSE,row.names= FALSE)
