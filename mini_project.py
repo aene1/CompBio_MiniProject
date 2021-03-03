@@ -20,9 +20,7 @@ def download_data(SRR):
 
 def fastq(SRR):
     fastq = 'fastq-dump -I --split-files ' + SRR + '.1'
-    rename = 'mv ' + SRR + '.1' + SRR
     os.system(fastq)
-    os.system(rename)
     print(fastq)
 
 
@@ -150,11 +148,11 @@ files = [f for f in files if os.path.isfile(f)]
 for i in args.SRR:
     if i not in files:
         download_data(i)
-        # fastq(i)
+        fastq(i)
 
-# extract_CDS()
-# index_bowtie()
-# print("INDEX BOWTIE BUILT")
+extract_CDS()
+index_bowtie()
+print("INDEX BOWTIE BUILT")
 #
 # for i in args.SRR:
 #     kallisto(i)
