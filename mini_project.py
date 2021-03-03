@@ -89,6 +89,27 @@ def bowtie2(SRR):
     os.system(bowtie2)
 
 
+def Count_bowtie(SRR):
+    bowtie_SRR1 = open('EF999921_' + SRR + '.1.fastq').readlines()
+    bowtie_SRR2 = open('EF999921_' + SRR + '.2.fastq').readlines()
+    donor = ''
+    if SRR == "SRR5660030":
+        donor += 'Donor 1 (2dpi)'
+    elif SRR == 'SRR5660033':
+        donor += 'Donor 1 (6dpi)'
+    elif SRR == 'SRR5660044':
+        donor += 'Donor 3 (2dpi)'
+    elif SRR == 'SRR5660045	':
+        donor += 'Donor 3 (6dpi)'
+    len_bowtie = ((len(bowtie_SRR1)+len(bowtie_SRR2))/8)
+    original1 = open(SRR + '.1_1.fastq').readlines()
+    original2 = open(SRR + '.1_2.fastq').readlines()
+    original = (len(original1) + len(original2))/8
+    #write out to the log file
+    with open('MiniProject.log', 'a') as output:
+        output.write(donor + " had " + str(original) + ' read pairs before Bowtie2 filtering and ' + str(len_bowtie) + ' read pairs after \n')
+        output.close()
+
 
 parser = argparse.ArgumentParser(description='Process some SRRs and split paired reads.')
 parser.add_argument('SRR', metavar='N', type=str, nargs='+',
