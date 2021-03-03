@@ -96,11 +96,11 @@ def Count_bowtie(SRR):
     donor = ''
     if SRR == "SRR5660030":
         donor += 'Donor 1 (2dpi)'
-    elif SRR == 'SRR5660033':
+    if SRR == 'SRR5660033':
         donor += 'Donor 1 (6dpi)'
-    elif SRR == 'SRR5660044':
+    if SRR == 'SRR5660044':
         donor += 'Donor 3 (2dpi)'
-    elif SRR == 'SRR5660045	':
+    if SRR == 'SRR5660045':
         donor += 'Donor 3 (6dpi)'
     bowtie_SRR1 = open('bowtie2_' + SRR + '.1.fastq').readlines()
     bowtie_SRR2 = open('bowtie2_' + SRR + '.2.fastq').readlines()
@@ -120,6 +120,7 @@ def run_spades(SRR1, SRR2, SRR3, SRR4):  # use only assembler to make Spades a l
     SRR4 = path + "/" + 'bowtie2_' + SRR4
     spades_command = 'spades -k 55,77,99,127 --only-assembler -t 2 --pe1-1 ' + SRR1 + '.1.fastq --pe1-2 ' + SRR1 + '.2.fastq --pe2-1 '+ SRR2 + '.1.fastq --pe2-2  ' + SRR2 + '.2.fastq --pe3-1 '+ SRR3 + '.1.fastq --pe3-2 '+ SRR3 + '.2.fastq --pe4-1 ' + SRR4 + '.1.fastq --pe4-2 ' + SRR4 + '.2.fastq -o '+ path + '/Spades/'
     # run SPades and print command to log file
+    os.system(spades_command)
     print(spades_command)
     log_file.write(spades_command + '\n')
 
