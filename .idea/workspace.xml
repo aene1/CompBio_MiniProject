@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="rename fixed for fastq function">
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="fix kallisto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -384,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614733314102</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="fix kallisto">
+      <created>1614733746342</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1614733746342</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -419,7 +427,8 @@
     <MESSAGE value="fix R" />
     <MESSAGE value="fix sleuth" />
     <MESSAGE value="rename fixed for fastq function" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename fixed for fastq function" />
+    <MESSAGE value="fix kallisto" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix kallisto" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1458" height="157" key="GridCell.Tab.0.bottom" timestamp="1614714211482">
@@ -454,11 +463,11 @@
     <state width="1458" height="157" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1614714211482" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1614617444601" />
     <state width="1386" height="276" key="GridCell.Tab.0.right/0.23.1792.1033@0.23.1792.1033" timestamp="1614618304844" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614733316552">
-      <screen x="0" y="23" width="1792" height="1030" />
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2" timestamp="1614733749510">
+      <screen x="0" y="23" width="1792" height="1026" />
     </state>
     <state x="421" y="269" key="Vcs.Push.Dialog.v2/0.23.1792.1024@0.23.1792.1024" timestamp="1614642370329" />
-    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614732391157" />
+    <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1026@0.23.1792.1026" timestamp="1614733749510" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1614732646531" />
     <state x="421" y="270" key="Vcs.Push.Dialog.v2/0.23.1792.1030@0.23.1792.1030" timestamp="1614733316552" />
     <state x="421" y="271" key="Vcs.Push.Dialog.v2/0.23.1792.1031@0.23.1792.1031" timestamp="1614731773451" />

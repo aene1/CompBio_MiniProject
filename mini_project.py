@@ -65,7 +65,7 @@ def SleuthInput(SRR):
     output.close()
 
 def Sleuth():
-    Sleuth_command = 'R Sleuth.R'
+    Sleuth_command = 'Rscript Sleuth.R'
     os.system(Sleuth_command)
     sleuth_output = 'R_sleuth.txt'
     read_sleuth = open(sleuth_output).readlines()
@@ -73,12 +73,12 @@ def Sleuth():
         log_file.write(i + 'n')
 
 
-
-# def bowtie2(SRR):
-#     build = 'bowtie2-build ./EF999921.fasta EF99992_1'
-#     os.system(build)
-#     bowtie = 'bowtie2 --quiet --no-unal --al-conc BOW_'+SRR+'.fastq -x EF99992_1 -1 '+SRR+ '_1.fastq -2'+SRR+'_2.fastq -S '+SRR+ '.sam'
-#     os.system(bowtie)
+#build bowtie2 and run it to get SAM files
+def bowtie2(SRR):
+    build_bowtie2 = 'bowtie2-build ./EF999921.fasta EF99992_1'
+    os.system(build_bowtie2)
+    bowtie2 = 'bowtie2 --quiet --no-unal --al-conc EF999921_' + SRR + '.fastq -x EF999921_1 -1 '+ SRR+ '.1_1.fastq -2 ' + SRR + '.1_2.fastq -S EF999921_' + SRR+ '.sam'
+    os.system(bowtie2)
 
 
 
@@ -102,6 +102,7 @@ extract_CDS()
 for i in args.SRR:
     fastq(i)
     kallisto(i)
+    bowtie2(i)
 
 SleuthInput(args.SRR)
 Sleuth()
