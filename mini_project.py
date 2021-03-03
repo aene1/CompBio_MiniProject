@@ -102,7 +102,7 @@ extract_CDS()
 for i in args.SRR:
     fastq(i)
     kallisto(i)
-    bowtie2(i)
+    # bowtie2(i)
 
 SleuthInput(args.SRR)
 Sleuth()
