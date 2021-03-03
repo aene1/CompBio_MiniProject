@@ -112,10 +112,11 @@ def Count_bowtie(SRR):
 
 
 def run_spades(SRR1, SRR2, SRR3, SRR4): #use only assembler to make Spades a lot shorter
-    spades_command = 'spades -k 55,77,99,127 --only-assembler -t 2 --pe1-1 EF999921_'+ SRR1 + '.1.fastq --pe1-2 EF999921_'+ SRR1 + '.2.fastq --pe2-1 EF999921_'+ SRR2 + '.1.fastq --pe2-2 EF999921_' + SRR2 + '.2.fastq --pe3-1 EF999921_' + SRR3 + '.1.fastq --pe3-2 EF999921_' + SRR3 +'.2.fastq --pe4-1 EF999921_' + SRR4 + '.1.fastq --pe4-2 EF999921_' + SRR4 + '.2.fastq -o Spades/'
-    #run SPades and print out the command to MiniProject.log
+    path = os.getcwd()
+    spades_command = 'spades -k 55,77,99,127 --only-assembler -t 2 --pe1-1 '  + path + "/" + 'EF999921'+ SRR1 + '.1.fastq --pe1-2 '  + path + "/" + 'EF999921_'+ SRR1 + '.2.fastq --pe2-1 '  + path + "/" + 'EF999921_'+ SRR2 + '.1.fastq --pe2-2  '  + path + "/" + 'EF999921_' + SRR2 + '.2.fastq --pe3-1  '  + path + "/" +'EF999921_' + SRR3 + '.1.fastq --pe3-2  '  + path + "/" +'EF999921_' + SRR3 +'.2.fastq --pe4-1  '  + path + "/" +'EF999921_' + SRR4 + '.1.fastq --pe4-2  '  + path + "/" + 'EF999921_' + SRR4 + '.2.fastq -o Spades/'
+    #run SPades and print command to log file
+    print(spades_command)
     log_file.write(spades_command + '\n')
-    log_file.close()
 
 
 
