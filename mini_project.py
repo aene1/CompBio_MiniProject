@@ -12,7 +12,7 @@ log_file = open('miniProject.log','w+')
 #download the SRR and fastq them
 def download_data(SRR):
     wget = 'wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/' + SRR + '/' + SRR + '.1'
-    rename = 'mv ' + SRR + '.1' +' ' + SRR
+    rename = 'mv ' + SRR + '.1' + SRR
     os.system(wget)
     os.system(rename)
 
@@ -43,7 +43,7 @@ def extract_CDS():
 def kallisto(SRR):
     kallisto_index = 'time kallisto index -i index/index.idx CDS_EF999921.fa'
     os.system(kallisto_index)
-    run_kallisto = 'time kallisto quant -i index/index.idx -o ./' + SRR +' -b 30 -t 4 '+ SRR + '1_1.fastq '+ SRR+ '1_2.fastq'
+    run_kallisto = 'time kallisto quant -i index/index.idx -o ./' + SRR +' -b 30 -t 4 '+ SRR + '_1.fastq '+ SRR+ '_2.fastq'
     os.system(run_kallisto)
 
 
