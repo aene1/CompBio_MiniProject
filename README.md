@@ -9,22 +9,22 @@ Author : Adriana Ene
 * Bowtie2
 * SPAdes
 
-###Python Script
+Python Script
 
 There are 2 options of running the script. If the SRR files are already downloaded in the directory those are the files
 that will be used to run the script. If they are not, they will automatically get downloaded from the NCBI SRR database. 
 
-####INSTALL
+INSTALL
 
     git clone https://github.com/aene1/CompBio_MiniProject.git
     
-####RUN
+RUN
     python3 mini_project.py <SRR1> <SRR2> <SRR3> <SRR4>
     
-####EXAMPLE
+EXAMPLE
     python3 mini_project.py SRR5660030 SRR5660033 SRR5660044 SRR5660045
 
-####Files included in Repo
+Files included in Repo
 
 * mini_project.py
    >  the whole pipeline which is composed of multiple functions that give each outputs
