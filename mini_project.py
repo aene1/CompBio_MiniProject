@@ -17,7 +17,7 @@ def download_data(SRR):
     os.system(wget)
     os.system(rename)
 
-
+#run fastq
 def fastq(SRR):
     fastq = 'fastq-dump -I --split-files ' + SRR + '.1'
     os.system(fastq)
@@ -48,7 +48,7 @@ def kallisto(SRR):
     run_kallisto = 'time kallisto quant -i HCMV_index.idx -o' + path + '/results_' + SRR + ' -b 30 -t 4 ' + SRR + '.1_1.fastq ' + SRR + '.1_2.fastq'
     os.system(run_kallisto)
 
-
+#create file to input into kalisto
 def SleuthInput(SRR):
     # output file that goes in R
     output = open('input_sleuth.txt', 'w')
@@ -67,12 +67,13 @@ def SleuthInput(SRR):
     output.close()
 
 
+#add to the log file the sleuth.R command
 def Sleuth():
     Sleuth_command = 'Rscript sleuth.R'
     os.system(Sleuth_command)
     read_sleuth = open('R_sleuth_output.txt', 'r').readlines()
     for i in read_sleuth:
-        log_file.write(i + 'n')
+        log_file.write(i + '\n')
 
 
 # build bowtie2 and run it to get SAM files
@@ -91,7 +92,7 @@ def bowtie2(SRR):
     bowtie2 = 'bowtie2 --quiet --no-unal --al-conc bowtie2_' + SRR + '.fastq -x EF999921_1 -1 ' + SRR + '.1_1.fastq -2 ' + SRR + '.1_2.fastq -S EF999921_'
     os.system(bowtie2)
 
-
+#evaluate number of reads before and after bowtie2
 def Count_bowtie(SRR):
     donor = ''
     if SRR == "SRR5660030":
@@ -109,35 +110,59 @@ def Count_bowtie(SRR):
     len_bowtie = ((len(bowtie_SRR1) + len(bowtie_SRR2)) / 8)
     original = (len(original1) + len(original2)) / 8
     # write out to the log file
-    log_file.write(donor + " had " + str(original) + ' read pairs before Bowtie2 filtering and ' + str(len_bowtie) + ' read pairs after \n')
+    log_file.write(donor + ' had ' + str(original) + ' read pairs before Bowtie2 filtering and ' + str(
+        len_bowtie) + ' read pairs after \n')
 
 
-def run_spades(SRR1, SRR2, SRR3, SRR4):  # use only assembler to make Spades a lot shorter
+#run spades
+def run_spades(SRR1, SRR2, SRR3, SRR4):
     path = os.getcwd()
     SRR1 = path + "/" + 'bowtie2_' + SRR1
     SRR2 = path + "/" + 'bowtie2_' + SRR2
     SRR3 = path + "/" + 'bowtie2_' + SRR3
     SRR4 = path + "/" + 'bowtie2_' + SRR4
-    spades_command = 'spades -k 55,77,99,127 --only-assembler -t 2 --pe1-1 ' + SRR1 + '.1.fastq --pe1-2 ' + SRR1 + '.2.fastq --pe2-1 '+ SRR2 + '.1.fastq --pe2-2  ' + SRR2 + '.2.fastq --pe3-1 '+ SRR3 + '.1.fastq --pe3-2 '+ SRR3 + '.2.fastq --pe4-1 ' + SRR4 + '.1.fastq --pe4-2 ' + SRR4 + '.2.fastq -o '+ path + '/Spades/'
+    spades_command = 'spades -k 55,77,99,127 --only-assembler -t 2 --pe1-1 ' + SRR1 + '.1.fastq --pe1-2 ' + SRR1 + '.2.fastq --pe2-1 ' + SRR2 + '.1.fastq --pe2-2  ' + SRR2 + '.2.fastq --pe3-1 ' + SRR3 + '.1.fastq --pe3-2 ' + SRR3 + '.2.fastq --pe4-1 ' + SRR4 + '.1.fastq --pe4-2 ' + SRR4 + '.2.fastq -o ' + path + '/Spades/'
     # run SPades and print command to log file
     os.system(spades_command)
     print(spades_command)
     log_file.write(spades_command + '\n')
 
+#calculate the number of contigs above 1000, the longest contig combined and the longest contig
+def contig_calc():
+    contig_over_1000_dict = {}
+    os.chdir(path + '/spades_assembly')  # navigate to spades_assembly folder
+    record = SeqIO.parse('contigs.fasta', 'fasta')
+    count = 0
+    total_lenght = 0
+    inputfile = 'longest_contig.fasta'
+    for i in record:
+        if len(i.seq) > 1000:
+            count += 1
+            total_lenght += len(i.seq)
+            contig_over_1000_dict[i] = len(i.seq)
+    log_file.write('There are ' + str(count) + ' contigs > 1000 bp in the assembly.')
+    log_file.write('There are' + total_lenght + ' bp in the assembly.')
+    log_file.write('\n')
+    keymax = max(contig_over_1000_dict, key=contig_over_1000_dict.get)
+    SeqIO.write(keymax,inputfile,'fasta')
 
-# def contig_calc():
-#     os.chdir(path + '/spades_assembly')  # navigate to spades_assembly folder
-#     record = SeqIO.parse('contigs.fasta', 'fasta')
-#     count = 0
-#     seq_len = 0
-#     longest
-#     for i in record:
-#         if len(i.seq) > 1000:
-#             count += 1
-#     log_file.write('There are ' + str(count) + ' contigs > 1000 bp in the assembly.')
-#     log_file.write('\n')
 
 
+#blast against a local dabase. WAY  QUICKER this way
+def blast_longestcontigs():
+    path = os.getcwd()
+    makeblastdb_command = 'makeblastdb -in ' + path + '/blast_db.fasta -out ' + path + '/betaherpesvirinae -title betaherpesvirinae -dbtype nucl'
+    os.system(makeblastdb_command)
+    blastn_cmd = 'blastn -query ' + path + '/longest_contig.fasta -db betaherpesvirinae -max_target_seqs 10 -out ' + path + '/blast_results.txt -outfmt "6 sacc pident length qstart qend sstart send bitscore evalue stitle"'
+    os.system(blastn_cmd)
+    log_file.write('sacc' + '\t' + 'pident' + '\t' + 'length' + '\t' + 'qstart' + '\t' + 'qend' + '\t' + 'sstart' + '\t' + 'send' + '\t' + 'bitscore' + '\t' + 'eval' + '\t' + 'stitle')
+    log_file.write('\n')
+    read_blast_results = open('blast_results.txt').read().splitlines()
+    for i in read_blast_results:
+        log_file.write(str(i))
+        log_file.write('\n')
+
+#add argparse to parse the inpput from the command line
 parser = argparse.ArgumentParser(description='Process some SRRs and split paired reads.')
 parser.add_argument('SRR', metavar='N', type=str, nargs='+',
                     help='SRR files we want for the comparasion')
@@ -145,6 +170,8 @@ parser.add_argument('--download_files', metavar='N', type=str, nargs='+',
                     help='Download the SRR, instead of using the server ones')
 args = parser.parse_args()
 
+
+#Main code of running
 in_path = os.getcwd()
 files = glob.glob(("**/*"), recursive=True)
 files = [f for f in files if os.path.isfile(f)]
@@ -153,26 +180,28 @@ for i in args.SRR:
     if i not in files:
         download_data(i)
 
+# for i in args.download_files:
+#     download_data(i)
 
 # extract_CDS()
 # index_bowtie()
-# print("INDEX BOWTIE BUILT")
 #
 # # for i in args.SRR:
 # #     fastq(i)
 #
 # for i in args.SRR:
 #     kallisto(i)
-#     print("BUILD INDEX")
 #     bowtie2(i)
-#     print("RAN BOWTIE")
 # #
 # SleuthInput(args.SRR)
 # print('SLEUTHinput WORKED')
 # Sleuth()
 #
 #
-for i in args.SRR:
-    Count_bowtie(i)
+# for i in args.SRR:
+#     Count_bowtie(i)
+#
+# run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
 
-run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
+contig_calc()
+blast_longestcontigs()
