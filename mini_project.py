@@ -198,7 +198,7 @@ for i in args.SRR:
     bowtie2(i)
 #
 SleuthInput(args.SRR)
-print('SLEUTHinput WORKED')
+
 Sleuth()
 
 for i in args.SRR:
