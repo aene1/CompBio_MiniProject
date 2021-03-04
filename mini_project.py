@@ -144,7 +144,7 @@ def contig_calc():
                 current_seq = len(i.seq)
                 SeqIo_object_max = i
     log_file.write('There are ' + str(count) + ' contigs > 1000 bp in the assembly.' + '\n')
-    log_file.write('There are' + str(total_lenght) + ' bp in the assembly.' + '\n')
+    log_file.write('There are ' + str(total_lenght) + ' bp in the assembly.' + '\n')
     log_file.write('\n')
     print(current_seq)
     SeqIO.write(SeqIo_object_max,inputfile,'fasta')
@@ -156,7 +156,7 @@ def blast_longestcontigs():
     input_blast = '/sequence.fasta'
     makeblastdb_command = 'makeblastdb -in ' + path + input_blast +' -out ' + path + '/betaherpesvirinae -title betaherpesvirinae -dbtype nucl'
     os.system(makeblastdb_command)
-    blastn_cmd = 'blastn -query ' + path + '/longest_contig.fasta -db ../betaherpesvirinae -max_target_seqs 10 -out ' + path + 'blast_results.txt -outfmt "6 sacc pident length qstart qend sstart send bitscore evalue stitle"'
+    blastn_cmd = 'blastn -query ' + path + '/longest_contig.fasta -db ../betaherpesvirinae -max_target_seqs 10 -out ' + path + '/blast_results.txt -outfmt "6 sacc pident length qstart qend sstart send bitscore evalue stitle"'
     os.system(blastn_cmd)
     log_file.write('sacc' + '\t' + 'pident' + '\t' + 'length' + '\t' + 'qstart' + '\t' + 'qend' + '\t' + 'sstart' + '\t' + 'send' + '\t' + 'bitscore' + '\t' + 'eval' + '\t' + 'stitle')
     log_file.write('\n')
