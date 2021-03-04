@@ -153,7 +153,7 @@ def contig_calc():
 
 #blast against a local dabase. WAY  QUICKER this way
 def blast_longestcontigs():
-    input_blast = 'sequence.fasta'
+    input_blast = '/sequence.fasta'
     makeblastdb_command = 'makeblastdb -in ' + path + input_blast +' -out ' + path + '/betaherpesvirinae -title betaherpesvirinae -dbtype nucl'
     os.system(makeblastdb_command)
     print(makeblastdb_command)
