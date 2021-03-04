@@ -139,7 +139,7 @@ def contig_calc():
         if len(i.seq) > 1000:
             count += 1
             total_lenght += len(i.seq)
-            contig_over_1000_dict[i] = len(i.seq)
+            contig_over_1000_dict[i.seq] = len(i.seq)
     log_file.write('There are ' + str(count) + ' contigs > 1000 bp in the assembly.')
     log_file.write('There are' + total_lenght + ' bp in the assembly.')
     log_file.write('\n')
