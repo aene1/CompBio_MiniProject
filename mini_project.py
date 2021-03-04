@@ -189,18 +189,18 @@ if not args.Tests:
             download_data(i)
             fastq(i)
 
-# for i in args.SRR:
-#     kallisto(i)
-#     bowtie2(i)
-# #
-# SleuthInput(args.SRR)
-# print('SLEUTHinput WORKED')
-# Sleuth()
+for i in args.SRR:
+    kallisto(i)
+    bowtie2(i)
 #
-# for i in args.SRR:
-#     Count_bowtie(i)
-#
-# run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
-#
-# contig_calc()
-# blast_longestcontigs(
+SleuthInput(args.SRR)
+print('SLEUTHinput WORKED')
+Sleuth()
+
+for i in args.SRR:
+    Count_bowtie(i)
+
+run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
+
+contig_calc()
+blast_longestcontigs()
