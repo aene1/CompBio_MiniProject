@@ -143,8 +143,8 @@ def contig_calc():
             if len(i.seq) > current_seq:
                 current_seq = len(i.seq)
                 SeqIo_object_max = i
-    log_file.write('There are ' + str(count) + ' contigs > 1000 bp in the assembly.')
-    log_file.write('There are' + str(total_lenght) + ' bp in the assembly.')
+    log_file.write('There are ' + str(count) + ' contigs > 1000 bp in the assembly.' + '\n')
+    log_file.write('There are' + str(total_lenght) + ' bp in the assembly.' + '\n')
     log_file.write('\n')
     print(current_seq)
     SeqIO.write(SeqIo_object_max,inputfile,'fasta')
