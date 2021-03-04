@@ -92,6 +92,7 @@ def bowtie2(SRR):
     bowtie2 = 'bowtie2 --quiet --no-unal --al-conc bowtie2_' + SRR + '.fastq -x EF999921_1 -1 ' + SRR + '.1_1.fastq -2 ' + SRR + '.1_2.fastq -S EF999921_'
     os.system(bowtie2)
 
+
 #evaluate number of reads before and after bowtie2
 def Count_bowtie(SRR):
     donor = ''
@@ -170,8 +171,7 @@ def blast_longestcontigs():
 parser = argparse.ArgumentParser(description='Process some SRRs and split paired reads.')
 parser.add_argument('SRR', metavar='N', type=str, nargs='+',
                     help='SRR files we want for the comparasion')
-parser.add_argument('--download_files', metavar='N', type=str, nargs='+',
-                    help='Download the SRR, instead of using the server ones')
+parser.add_argument('--Tests', action='store_true', help='Run Test Data')
 args = parser.parse_args()
 
 
@@ -180,25 +180,21 @@ in_path = os.getcwd()
 files = glob.glob(("**/*"), recursive=True)
 files = [f for f in files if os.path.isfile(f)]
 
-for i in args.SRR:
-    if i not in files:
-        download_data(i)
-
-for i in args.download_files:
-    download_data(i)
-
 extract_CDS()
 index_bowtie()
 
-for i in args.SRR:
-    fastq(i)
+if not args.Tests:
+    for i in args.SRR:
+        if i not in files:
+            download_data(i)
+            fastq(i)
 
 for i in args.SRR:
     kallisto(i)
     bowtie2(i)
 #
 SleuthInput(args.SRR)
-
+print('SLEUTHinput WORKED')
 Sleuth()
 
 for i in args.SRR:
@@ -207,4 +203,4 @@ for i in args.SRR:
 run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
 
 contig_calc()
-blast_longestcontigs()
+blast_longestcontigs(
