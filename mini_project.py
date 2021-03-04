@@ -147,7 +147,7 @@ def contig_calc():
     log_file.write('There are' + str(total_lenght) + ' bp in the assembly.')
     log_file.write('\n')
     print(current_seq)
-    print(SeqIo_object_max)
+    SeqIO.write(SeqIo_object_max,inputfile,'fasta')
 
 
 
