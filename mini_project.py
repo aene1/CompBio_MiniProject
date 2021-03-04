@@ -162,6 +162,7 @@ def blast_longestcontigs():
     log_file.write('\n')
     read_blast_results = open('blast_results.txt').read().splitlines()
     for i in read_blast_results:
+        print(i)
         log_file.write(str(i))
         log_file.write('\n')
 
@@ -186,24 +187,24 @@ for i in args.SRR:
 # for i in args.download_files:
 #     download_data(i)
 
-extract_CDS()
-index_bowtie()
-
-for i in args.SRR:
-    fastq(i)
-
-for i in args.SRR:
-    kallisto(i)
-    bowtie2(i)
+# extract_CDS()
+# index_bowtie()
 #
-SleuthInput(args.SRR)
-print('SLEUTHinput WORKED')
-Sleuth()
-
-for i in args.SRR:
-    Count_bowtie(i)
-
-run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
-
-contig_calc()
+# for i in args.SRR:
+#     fastq(i)
+#
+# for i in args.SRR:
+#     kallisto(i)
+#     bowtie2(i)
+# #
+# SleuthInput(args.SRR)
+# print('SLEUTHinput WORKED')
+# Sleuth()
+#
+# for i in args.SRR:
+#     Count_bowtie(i)
+#
+# run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
+#
+# contig_calc()
 blast_longestcontigs()
