@@ -130,7 +130,7 @@ def run_spades(SRR1, SRR2, SRR3, SRR4):
 #calculate the number of contigs above 1000, the longest contig combined and the longest contig
 def contig_calc():
     contig_over_1000_dict = {}
-    os.chdir(path + '/spades_assembly')  # navigate to spades_assembly folder
+    os.chdir(path + '/Spades')  # navigate to spades_assembly folder
     record = SeqIO.parse('contigs.fasta', 'fasta')
     count = 0
     total_lenght = 0
@@ -184,7 +184,7 @@ for i in args.SRR:
 #     download_data(i)
 
 # extract_CDS()
-# index_bowtie()
+# index_bowtie()r
 #
 # # for i in args.SRR:
 # #     fastq(i)
