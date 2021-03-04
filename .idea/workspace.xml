@@ -81,20 +81,6 @@
       <option name="presentableId" value="Default" />
       <updated>1614558781301</updated>
     </task>
-    <task id="LOCAL-00065" summary="added print staments">
-      <created>1614774815281</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1614774815281</updated>
-    </task>
-    <task id="LOCAL-00066" summary="added print staments">
-      <created>1614777788900</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1614777788900</updated>
-    </task>
     <task id="LOCAL-00067" summary="added print staments">
       <created>1614778417445</created>
       <option name="number" value="00067" />
@@ -424,7 +410,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614866138121</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="blast">
+      <created>1614866216553</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1614866216553</updated>
+    </task>
+    <task id="LOCAL-00115" summary="blast">
+      <created>1614866447639</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1614866447639</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
