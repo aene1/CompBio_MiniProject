@@ -26,9 +26,10 @@ that will be used to run the script. If they are not, they will automatically ge
     
 ## TO RUN TEST DATA ##
 Go to the TEST directory and run the following command:
+
     python3 mini_project.py SRR5660030 SRR5660033 SRR5660044 SRR5660045 --Test
 
-
+The test data contains the first 10000 lines of the paired fastq files. Which makes it significantly faster to run.
 ***Files included in Repo***
 
 * mini_project.py
