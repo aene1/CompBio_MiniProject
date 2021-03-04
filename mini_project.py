@@ -184,27 +184,27 @@ for i in args.SRR:
     if i not in files:
         download_data(i)
 
-# for i in args.download_files:
-#     download_data(i)
+for i in args.download_files:
+    download_data(i)
 
-# extract_CDS()
-# index_bowtie()
+extract_CDS()
+index_bowtie()
+
+for i in args.SRR:
+    fastq(i)
+
+for i in args.SRR:
+    kallisto(i)
+    bowtie2(i)
 #
-# for i in args.SRR:
-#     fastq(i)
-#
-# for i in args.SRR:
-#     kallisto(i)
-#     bowtie2(i)
-# #
-# SleuthInput(args.SRR)
-# print('SLEUTHinput WORKED')
-# Sleuth()
-#
-# for i in args.SRR:
-#     Count_bowtie(i)
-#
-# run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
-#
-# contig_calc()
+SleuthInput(args.SRR)
+print('SLEUTHinput WORKED')
+Sleuth()
+
+for i in args.SRR:
+    Count_bowtie(i)
+
+run_spades(args.SRR[0], args.SRR[1], args.SRR[2], args.SRR[3])
+
+contig_calc()
 blast_longestcontigs()
