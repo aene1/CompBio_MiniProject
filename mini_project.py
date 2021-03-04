@@ -163,7 +163,6 @@ def blast_longestcontigs():
     log_file.write('sacc' + '\t' + 'pident' + '\t' + 'length' + '\t' + 'qstart' + '\t' + 'qend' + '\t' + 'sstart' + '\t' + 'send' + '\t' + 'bitscore' + '\t' + 'eval' + '\t' + 'stitle' + '\n')
     read_blast_results = open('blast_results.txt').readlines()
     for i in read_blast_results:
-        print(i)
         log_file.write(str(i))
         log_file.write('\n')
 
