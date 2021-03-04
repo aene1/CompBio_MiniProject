@@ -162,7 +162,7 @@ def blast_longestcontigs():
     blastn_cmd = 'blastn -query ' + path + '/longest_contig.fasta -db '+ path + 'betaherpesvirinae -max_target_seqs 10 -out ' + path + '/blast_results.txt -outfmt "6 sacc pident length qstart qend sstart send bitscore evalue stitle"'
     os.system(blastn_cmd)
     log_file.write('sacc' + '\t' + 'pident' + '\t' + 'length' + '\t' + 'qstart' + '\t' + 'qend' + '\t' + 'sstart' + '\t' + 'send' + '\t' + 'bitscore' + '\t' + 'eval' + '\t' + 'stitle' + '\n')
-    read_blast_results = open('blast_results.txt').readlines()
+    read_blast_results = open(path + 'blast_results.txt', 'r').readlines()
     for i in read_blast_results:
         log_file.write(str(i))
         log_file.write('\n')
