@@ -183,8 +183,8 @@ for i in args.SRR:
     if i not in files:
         download_data(i)
 
-for i in args.download_files:
-    download_data(i)
+# for i in args.download_files:
+#     download_data(i)
 
 extract_CDS()
 index_bowtie()
