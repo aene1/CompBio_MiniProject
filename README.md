@@ -25,7 +25,7 @@ that will be used to run the script. If they are not, they will automatically ge
     python3 mini_project.py SRR5660030 SRR5660033 SRR5660044 SRR5660045
     
 ## TO RUN TEST DATA ##
-Go to the TEST directory and run the following command:
+Go to the Test_data directory and run the following command:
 
     python3 mini_project.py SRR5660030 SRR5660033 SRR5660044 SRR5660045 --Test
 
