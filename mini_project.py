@@ -135,16 +135,19 @@ def contig_calc():
     count = 0
     total_lenght = 0
     inputfile = 'longest_contig.fasta'
+    current_seq = 0
     for i in record:
         if len(i.seq) > 1000:
             count += 1
             total_lenght += len(i.seq)
-            contig_over_1000_dict[i.seq] = len(i.seq)
+            if len(i.seq) > current_seq:
+                current_seq = len(i.seq)
+                SeqIo_object_max = i
     log_file.write('There are ' + str(count) + ' contigs > 1000 bp in the assembly.')
     log_file.write('There are' + str(total_lenght) + ' bp in the assembly.')
     log_file.write('\n')
-    keymax = max(contig_over_1000_dict, key=contig_over_1000_dict.get)
-    SeqIO.write(keymax,inputfile,'fasta')
+    print(len(current_seq))
+    print(SeqIo_object_max)
 
 
 
