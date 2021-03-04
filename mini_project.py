@@ -155,6 +155,7 @@ def contig_calc():
 def blast_longestcontigs():
     makeblastdb_command = 'makeblastdb -in ' + path + '/blast_db.fasta -out ' + path + '/betaherpesvirinae -title betaherpesvirinae -dbtype nucl'
     os.system(makeblastdb_command)
+    print(makeblastdb_command)
     blastn_cmd = 'blastn -query ' + path + '/Spades/longest_contig.fasta -db betaherpesvirinae -max_target_seqs 10 -out ' + path + '/blast_results.txt -outfmt "6 sacc pident length qstart qend sstart send bitscore evalue stitle"'
     os.system(blastn_cmd)
     log_file.write('sacc' + '\t' + 'pident' + '\t' + 'length' + '\t' + 'qstart' + '\t' + 'qend' + '\t' + 'sstart' + '\t' + 'send' + '\t' + 'bitscore' + '\t' + 'eval' + '\t' + 'stitle')
