@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="blast" />
+    <list default="true" id="1dc1f37d-2b85-4872-a835-c98cd389a3b1" name="Default Changelist" comment="blast">
+      <change beforePath="$PROJECT_DIR$/mini_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_project.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,27 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614558781301</updated>
-    </task>
-    <task id="LOCAL-00062" summary="fixed bowtie">
-      <created>1614763361521</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1614763361521</updated>
-    </task>
-    <task id="LOCAL-00063" summary="count_bowtie">
-      <created>1614763967378</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1614763967378</updated>
-    </task>
-    <task id="LOCAL-00064" summary="count_bowtie">
-      <created>1614773275123</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1614773275123</updated>
     </task>
     <task id="LOCAL-00065" summary="added print staments">
       <created>1614774815281</created>
@@ -422,7 +403,28 @@
       <option name="project" value="LOCAL" />
       <updated>1614865617133</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="blast">
+      <created>1614865929419</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1614865929419</updated>
+    </task>
+    <task id="LOCAL-00112" summary="blast">
+      <created>1614866004477</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1614866004477</updated>
+    </task>
+    <task id="LOCAL-00113" summary="blast">
+      <created>1614866138121</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1614866138121</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
